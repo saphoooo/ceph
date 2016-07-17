@@ -1,6 +1,8 @@
 FROM de13/rpi-xenial
 MAINTAINER de13 <stephane.beuret@data-essential.com>
-#RUN apt-get install vim screen htop iotop btrfs-tools lsb-release gdisk wget openssh-client openssh-server golang git
+
+# Kernel tweak for rpi
+RUN echo -e "vm.swappiness=1\nvm.min_free_kbytes = 32768\nkernel.pid_max = 32768" >> /etc/sysctl.conf
 
 # Add kviator https://github.com/AcalephStorage/kviator/
 ADD kviator /usr/local/bin/kviator
