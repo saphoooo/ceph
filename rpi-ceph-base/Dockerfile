@@ -7,17 +7,17 @@ RUN echo -e "vm.swappiness=1\nvm.min_free_kbytes = 32768\nkernel.pid_max = 32768
 # Add kviator https://github.com/AcalephStorage/kviator/
 ADD kviator /usr/local/bin/kviator
 
-# Add confd https://github.com/kelseyhightower/confd
+# Add confd version 0.11.0 https://github.com/kelseyhightower/confd
 ADD confd /usr/local/bin/confd
 RUN mkdir -p /etc/confd/conf.d && mkdir -p /etc/confd/templates
 
-# Add etcdctl https://github.com/coreos/etcd
+# Add etcdctl version 2.3.0 https://github.com/coreos/etcd
 ADD etcd /usr/local/bin/etcd
 ADD etcdctl /usr/local/bin/etcdctl
 
 # Install Ceph
 ADD sources.list /etc/apt/sources.list
-RUN apt-get update && apt-get install -y wget unzip uuid-runtime python-setuptools udev runit sharutils ceph radosgw rbd-mirror && \
+RUN apt-get update && apt-get install -y wget unzip uuid-runtime python-setuptools udev runit sharutils python3 ceph radosgw rbd-mirror && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
