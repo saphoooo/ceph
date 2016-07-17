@@ -1,0 +1,5 @@
+deb http://ports.ubuntu.com/ubuntu-ports yakkety main universe
+deb-src http://ports.ubuntu.com/ubuntu-ports yakkety main universe
+
+deb http://ports.ubuntu.com xenial-security main
+deb http://ports.ubuntu.com xenial-security universe

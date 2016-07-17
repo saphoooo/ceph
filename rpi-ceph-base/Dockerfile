@@ -16,8 +16,10 @@ ADD etcd /usr/local/bin/etcd
 ADD etcdctl /usr/local/bin/etcdctl
 
 # Install Ceph
-ADD sources.list /etc/apt/sources.list
-RUN apt-get update && apt-get install -y wget unzip uuid-runtime python-setuptools udev runit sharutils python3 ceph radosgw rbd-mirror && \
+ADD xenial.sources.list /etc/apt/sources.list
+RUN apt-get update && apt-get install -y wget unzip uuid-runtime python-setuptools udev runit sharutils python3
+ADD yakkety.sources.list /etc/apt/sources.list
+RUN apt-get update && apt-get install -y ceph radosgw rbd-mirror && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
