@@ -1,4 +1,4 @@
-FROM de13/rpi-ceph-base:testing
+FROM de13/rpi-ceph-base
 MAINTAINER de13 <stephane.beuret@data-essential.com>
 
 ADD my_init/my_init /sbin/my_init

@@ -1,8 +1,5 @@
-FROM de13/rpi-xenial
+FROM rpi-xenial
 MAINTAINER de13 <stephane.beuret@data-essential.com>
-
-# Kernel tweak for rpi
-RUN echo -e "vm.swappiness=1\nvm.min_free_kbytes = 32768\nkernel.pid_max = 32768" >> /etc/sysctl.conf
 
 # Add kviator https://github.com/AcalephStorage/kviator/
 ADD kviator /usr/local/bin/kviator
@@ -17,9 +14,10 @@ ADD etcdctl /usr/local/bin/etcdctl
 
 # Install Ceph
 ADD xenial.sources.list /etc/apt/sources.list
-RUN apt-get update && apt-get install -y wget unzip uuid-runtime python-setuptools udev runit sharutils python3
+RUN apt-get update && \
+    apt-get install -y wget unzip libudev1 udev runit uuid-runtime python-setuptools sharutils python3 ceph radosgw
 ADD yakkety.sources.list /etc/apt/sources.list
-RUN apt-get update && apt-get install -y ceph radosgw rbd-mirror && \
+RUN apt-get update && apt-get install -y rbd-mirror && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
