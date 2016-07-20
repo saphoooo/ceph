@@ -1,9 +1,9 @@
 # Ceph on rpi
 
 ## kviator, confd and etcd
-**[kviator]** (https://github.com/AcalephStorage/kviator/) is built as mentioned on Github.
-**[confd]** (https://github.com/kelseyhightower/confd) is also built as mentioned on Github.
-**etcd**:
+[kviator] (https://github.com/AcalephStorage/kviator/) is built as mentioned on Github.
+[confd] (https://github.com/kelseyhightower/confd) is also built as mentioned on Github.
+etcd:
 
 ```
 mkdir build ; cd build
