@@ -2,8 +2,10 @@
 
 ## kviator, confd and etcd
 [kviator] (https://github.com/AcalephStorage/kviator/) is built as mentioned on Github.
+
 [confd] (https://github.com/kelseyhightower/confd) is also built as mentioned on Github.
-etcd:
+
+for [etcd] (https://github.com/coreos/etcd/archive/):
 
 ```
 mkdir build ; cd build
