@@ -1,4 +1,4 @@
-FROM de13/rpi-yakkety-systemd
+FROM de13/rpi-yakkety-init
 MAINTAINER de13 <stephane.beuret@data-essential.com>
 
 # Add kviator https://github.com/AcalephStorage/kviator/
@@ -16,7 +16,7 @@ ADD etcdctl /usr/local/bin/etcdctl
 RUN sed -i 's_^deb .*_& universe_' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get install -y ceph ceph-base ceph-common ceph-fs-common ceph-mds \
-    ceph-mon ceph-osd libcephfs1 python-cephfs runit udev && \
+    ceph-mon ceph-osd libcephfs1 python-cephfs runit udev python-setuptools && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

@@ -24,3 +24,4 @@ RUN ls | grep -v systemd-tmpfiles-setup | xargs rm -f $1 && \
 WORKDIR /
 ENV init /lib/systemd/systemd
 VOLUME [ "/sys/fs/cgroup" ]
+CMD ["/lib/systemd/systemd"]
