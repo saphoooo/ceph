@@ -11,7 +11,7 @@ My aim is to port on Raspberry Pi the excellent work of *Sébastien* Han from **
 
 1. **Ceph mon**: OK
 1. **Ceph osd**: OK
-1. **Ceph mds**: mon crash when mds is started. See `[#16771] (http://tracker.ceph.com/issues/16771)`
+1. **Ceph mds**: mon crash when mds is started. See [#16771] (http://tracker.ceph.com/issues/16771)
 
 # kviator, confd and etcd
 
