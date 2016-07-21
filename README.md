@@ -1,17 +1,17 @@
 # Ceph on rpi
 
-Running Ceph Cluster on Raspberry Pi with only one image!
-My aim is to port on Raspberry Pi the excellent work of Sébastien Han from Red Hat on dockerizing Ceph.
+> **Running Ceph Cluster on Raspberry Pi with only one image!**
+My aim is to port on Raspberry Pi the excellent work of *Sébastien* Han from **Red Hat** on dockerizing Ceph.
 
-Some Dockerfiles are rewrited, kviator, confd and etcdctl are builded outside of the Dockerfile, and Yakkety is used instead of Xenial cause rbd mirror in not available.
+> Some Dockerfiles are rewrited, *kviator*, *confd* and *etcdctl* are builded outside of the Dockerfile, and **Yakkety** is used instead of **Xenial** cause rbd mirror in not available in **Xenial**.
 
-I still working on this, but reaching goals.
+> I still working on this, but reaching the goal!
 
 # Current status
 
-1. Ceph mon: OK
-1. Ceph osd: OK
-1. Ceph mds: mon crash when mds is started. See [#16583] (http://tracker.ceph.com/issues/16583)
+1. **Ceph mon**: OK
+1. **Ceph osd**: OK
+1. **Ceph mds**: mon crash when mds is started. See `[#16771] (http://tracker.ceph.com/issues/16771)
 
 # kviator, confd and etcd
 
