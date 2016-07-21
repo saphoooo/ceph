@@ -1,7 +1,7 @@
 # Ceph on rpi
 
 > **Running Ceph Cluster on Raspberry Pi with only one image!**
-My aim is to port on Raspberry Pi the excellent work of *Sébastien* Han from **Red Hat** on dockerizing Ceph.
+My aim is to port on Raspberry Pi the excellent work of *Sébastien Han* from **Red Hat** on dockerizing Ceph.
 
 > Some Dockerfiles are rewrited, *kviator*, *confd* and *etcdctl* are builded outside of the Dockerfile, and **Yakkety** is used instead of **Xenial** cause rbd mirror in not available in **Xenial**.
 
