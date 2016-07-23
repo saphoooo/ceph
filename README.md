@@ -13,22 +13,11 @@ My aim is to port on Raspberry Pi the excellent work of *Sébastien Han* from **
 1. **Ceph osd**: OK
 1. **Ceph mds**: mon crash when mds is started. See [#16771] (http://tracker.ceph.com/issues/16771)
 
-# kviator, confd and etcd
+# kviator and confd
 
 [kviator] (https://github.com/AcalephStorage/kviator/) is built as mentioned on Github.
 
 [confd] (https://github.com/kelseyhightower/confd) is also built as mentioned on Github.
-
-for [etcd] (https://github.com/coreos/etcd/archive/):
-
-```
-mkdir build ; cd build
-wget https://github.com/coreos/etcd/archive/v2.3.0.tar.gz
-tar xzf v2.3.0.tar.gz
-cd etcd-2.3.0/
-./build
-cp bin/* /usr/local/bin/.
-```
 
 # rpi-ceph-daemon
 
