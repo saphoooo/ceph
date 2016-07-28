@@ -40,7 +40,7 @@ if [ ! -z "${KV_CA_CERT}" ]; then
 fi
 
 CEPH_OPTS="--cluster ${CLUSTER}"
-MOUNT_OPTS="-t xfs -o noatime,inode64"
+MOUNT_OPTS=""
 
 
 ####################
@@ -683,7 +683,7 @@ function start_mds {
   fi
 
   # NOTE: prefixing this with exec causes it to die (commit suicide)
-  /usr/bin/ceph-mds ${CEPH_OPTS} -d -i ${MDS_NAME} --setuser ceph --setgroup ceph
+  /usr/bin/ceph-mds ${CEPH_OPTS} -d -i ${MDS_NAME} --debug_mds 10 --setuser ceph --setgroup ceph
 }
 
 
