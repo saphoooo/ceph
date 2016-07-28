@@ -3,9 +3,7 @@
 > **Running Ceph Cluster on Raspberry Pi with only one image!**
 My aim is to port on Raspberry Pi the excellent work of *Sébastien Han* from **Red Hat** on dockerizing Ceph.
 
-> Some Dockerfiles are rewrited, *kviator*, *confd* and *etcdctl* are builded outside of the Dockerfile, and **Yakkety** is used instead of **Xenial** cause rbd mirror in not available in **Xenial**.
-
-> I still working on this, but reaching the goal!
+> Some Dockerfiles are rewrited, *kviator* and *confd* are builded outside of Dockerfile (follow Github links below to see how).
 
 # Current status
 
@@ -28,11 +26,11 @@ debootstrap was used to bootstrap rpi-yakkety
 # tar  -C yakkety -c . | docker import - rpi-yakkety
 ```
 
-From this base, you have all Dockerfiles.
+From this base, all Dockerfiles are in this Github repo.
 
 # How it's work
 
-See this [video] (https://www.youtube.com/watch?v=FUSTjTBA8f8&feature=youtu.be) on youtube.
+You can have a look on this [video] (https://www.youtube.com/watch?v=FUSTjTBA8f8&feature=youtu.be) on youtube.
 
 **Mainly**
 
