@@ -10,6 +10,12 @@ My aim is to port on Raspberry Pi the excellent work of *Sébastien Han* from **
 1. **Ceph mon**: OK
 1. **Ceph osd**: OK
 1. **Ceph rgw**: OK
+1. **etcd kv**: OK
+1. **s3-swift-api**: soon
+
+# etcd
+
+Need update -> see de13/rpi-etcd -> need better howto set up
 
 # kviator and confd
 
