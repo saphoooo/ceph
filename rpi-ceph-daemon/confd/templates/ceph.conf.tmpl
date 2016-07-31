@@ -1,9 +1,5 @@
 # Created and Maintained by Confd
 
-[debug]
-{{range gets "/debug/*"}}
-  {{base .Key}} = {{.Value}}{{end}}
-
 [global]
   fsid = {{getv "/auth/fsid"}}
 {{ if exists "/auth/cephx"}}
@@ -32,6 +28,10 @@
   auth supported = none
 {{end}}
 {{range gets "/global/*"}}
+  {{base .Key}} = {{.Value}}{{end}}
+
+[debug]
+{{range gets "/debug/*"}}
   {{base .Key}} = {{.Value}}{{end}}
 
 [mon]

@@ -4,6 +4,7 @@ dest = "/etc/ceph/@CLUSTER@.conf"
 keys = [
  "/auth/",
  "/global/",
+ "/debug/",
  "/mon/",
  "/mon_host/",
  "/osd/",
