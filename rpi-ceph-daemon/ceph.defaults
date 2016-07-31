@@ -3,35 +3,35 @@
 # the key path will be prefixed by /ceph-config/$CLUSTER
 
 # Disable in-memory logs
-/debug/debug_lockdep = 0/0
-/debug/debug_context = 0/0
-/debug/debug_crush = 0/0
-/debug/debug_buffer = 0/0
-/debug/debug_timer = 0/0
-/debug/debug_filer = 0/0
-/debug/debug_objecter = 0/0
-/debug/debug_rados = 0/0
-/debug/debug_rbd = 0/0
-/debug/debug_journaler = 0/0
-/debug/debug_objectcatcher = 0/0
-/debug/debug_client = 0/0
-/debug/debug_osd = 0/0
-/debug/debug_optracker = 0/0
-/debug/debug_objclass = 0/0
-/debug/debug_filestore = 0/0
-/debug/debug_journal = 0/0
-/debug/debug_ms = 0/0
-/debug/debug_monc = 0/0
-/debug/debug_tp = 0/0
-/debug/debug_auth = 0/0
-/debug/debug_finisher = 0/0
-/debug/debug_heartbeatmap = 0/0
-/debug/debug_perfcounter = 0/0
-/debug/debug_asok = 0/0
-/debug/debug_throttle = 0/0
-/debug/debug_mon = 0/0
-/debug/debug_paxos = 0/0
-/debug/debug_rgw = 0/0
+/debug/debug_lockdep 0/0
+/debug/debug_context 0/0
+/debug/debug_crush 0/0
+/debug/debug_buffer 0/0
+/debug/debug_timer 0/0
+/debug/debug_filer 0/0
+/debug/debug_objecter 0/0
+/debug/debug_rados 0/0
+/debug/debug_rbd 0/0
+/debug/debug_journaler 0/0
+/debug/debug_objectcatcher 0/0
+/debug/debug_client 0/0
+/debug/debug_osd 0/0
+/debug/debug_optracker 0/0
+/debug/debug_objclass 0/0
+/debug/debug_filestore 0/0
+/debug/debug_journal 0/0
+/debug/debug_ms 0/0
+/debug/debug_monc 0/0
+/debug/debug_tp 0/0
+/debug/debug_auth 0/0
+/debug/debug_finisher 0/0
+/debug/debug_heartbeatmap 0/0
+/debug/debug_perfcounter 0/0
+/debug/debug_asok 0/0
+/debug/debug_throttle 0/0
+/debug/debug_mon 0/0
+/debug/debug_paxos 0/0
+/debug/debug_rgw 0/0
 
 # auth
 /auth/cephx true
